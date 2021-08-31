@@ -1,0 +1,16 @@
+.CastList {
+  margin-left: 15px;
+  padding: 10px;
+  text-align: left;
+}
+
+.ActorImage {
+  margin-top: 10px;
+  width: 125px;
+}
+
+.ActorInfo {
+  list-style-type: none;
+
+  border-bottom: 1px solid #2a363b;
+}
