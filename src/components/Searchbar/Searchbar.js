@@ -19,17 +19,12 @@ function Searchbar({ onSubmit, onChangeQuery }) {
   };
 
   const handleSubmit = e => {
-    console.log('submit btn pressed');
+    //console.log('submit btn pressed');
     e.preventDefault();
     const normalizedSearchQuery = searchQuery.trim();
 
     if (normalizedSearchQuery.length !== 0) {
-      console.log(onSubmit);
       onSubmit(normalizedSearchQuery);
-      console.log(
-        'onQuerySubmit done with SearchQuery :',
-        normalizedSearchQuery,
-      );
     }
     setBtnDisabled(true);
   };

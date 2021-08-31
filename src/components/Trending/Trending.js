@@ -15,7 +15,7 @@ export default function Trending() {
       .catch(e => console.log('Error', e));
   }, []);
 
-  console.log('data.results: ', movies);
+  //console.log('data.results: ', movies);
   return (
     <div className={styles.Trending}>
       <h2>Trending today:</h2>

@@ -14,21 +14,21 @@ import CastView from '../CastView/CastView';
 import ReviewsView from '../ReviewsView/ReviewsView';
 import { fetchMovie } from '../../components/moviesAPI';
 
-import styles from './MovieView.module.css';
+import styles from './OneMovieView.module.css';
 
 const BASE_IMG_URL = 'https://image.tmdb.org/t/p/w500';
 
-const MovieView = () => {
+const OneMovieView = () => {
   const [movie, setMovie] = useState(null);
   const history = useHistory();
   const location = useLocation();
   const { url, path } = useRouteMatch();
   const { movieId } = useParams();
 
-  console.log('movieId: ', movieId);
+  //console.log('movieId: ', movieId);
 
   const onBackButton = () => {
-    console.log('location?.state?.from: ', location?.state?.from);
+    //console.log('location?.state?.from: ', location?.state?.from);
     history.push(location?.state?.from ?? '/');
   };
 
@@ -40,15 +40,15 @@ const MovieView = () => {
   return (
     <>
       {movie && (
-        <div className={styles.MovieView__section}>
+        <div className={styles.OneMovieView__section}>
           <Button onBackButton={onBackButton} />
-          <div className={styles.MovieView__container}>
+          <div className={styles.OneMovieView__container}>
             <img
-              className={styles.MovieView__image}
+              className={styles.OneMovieView__image}
               src={`${BASE_IMG_URL}${movie.poster_path}`}
               alt={movie.original_title}
             />
-            <div className={styles.MovieView__text}>
+            <div className={styles.OneMovieView__text}>
               <h2 style={{ color: '#1f87ff', fontSize: '30px' }}>
                 {movie.original_title}
               </h2>
@@ -101,4 +101,4 @@ const MovieView = () => {
   );
 };
 
-export default MovieView;
+export default OneMovieView;

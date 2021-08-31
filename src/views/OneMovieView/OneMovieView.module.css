@@ -1,11 +1,11 @@
-.MovieView__section {
+.OneMovieView__section {
   text-align: left;
   margin-left: 15px;
   padding: 10px;
   border-bottom: 1px solid #2a363b;
 }
 
-.MovieView__container {
+.OneMovieView__container {
   display: flex;
   width: 98%;
   padding: 15px;
@@ -14,13 +14,13 @@
     10px 1px 12px -5px rgba(0, 0, 0, 0.46);
 }
 
-.MovieView__image {
+.OneMovieView__image {
   padding-top: 30px;
   width: 17%;
   height: fit-content;
 }
 
-.MovieView__text {
+.OneMovieView__text {
   margin-left: 20px;
 }
 
